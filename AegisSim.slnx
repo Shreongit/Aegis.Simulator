@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AegisSim.App/AegisSim.App.csproj" />
+  <Project Path="AegisSim.Benchmarks/AegisSim.Benchmarks.csproj" />
+  <Project Path="AegisSim.Core/AegisSim.Core.csproj" />
+  <Project Path="AegisSim.Tests/AegisSim.Tests.csproj" />
+</Solution>
