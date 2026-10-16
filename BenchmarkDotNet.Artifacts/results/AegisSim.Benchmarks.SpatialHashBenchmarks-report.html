@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>AegisSim.Benchmarks.SpatialHashBenchmarks-20261015-143835</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.15.8, Windows 11 (10.0.26300.9711)
+12th Gen Intel Core i5-12450HX 2.40GHz, 1 CPU, 12 logical and 8 physical cores
+.NET SDK 10.0.401
+  [Host]     : .NET 10.0.12 (10.0.12, 10.0.1226.42308), X64 RyuJIT x86-64-v3
+  DefaultJob : .NET 10.0.12 (10.0.12, 10.0.1226.42308), X64 RyuJIT x86-64-v3
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method      </th><th>AgentCount</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Gen0</th><th>Gen1</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>RebuildSpatialHash</td><td>200</td><td>3.428 &mu;s</td><td>0.0679 &mu;s</td><td>0.1679 &mu;s</td><td>3.407 &mu;s</td><td>1.0490</td><td>0.0114</td><td>6.45 KB</td>
+</tr><tr><td>QueryNearbyAgents</td><td>200</td><td>62.418 &mu;s</td><td>1.2360 &mu;s</td><td>1.2139 &mu;s</td><td>62.605 &mu;s</td><td>10.2539</td><td>-</td><td>62.88 KB</td>
+</tr><tr><td>RebuildSpatialHash</td><td>500</td><td>16.926 &mu;s</td><td>1.7506 &mu;s</td><td>5.1617 &mu;s</td><td>20.037 &mu;s</td><td>4.1962</td><td>0.1984</td><td>25.78 KB</td>
+</tr><tr><td>QueryNearbyAgents</td><td>500</td><td>157.930 &mu;s</td><td>1.1078 &mu;s</td><td>1.0362 &mu;s</td><td>157.665 &mu;s</td><td>43.4570</td><td>-</td><td>266.8 KB</td>
+</tr><tr><td>RebuildSpatialHash</td><td>1000</td><td>19.323 &mu;s</td><td>0.1477 &mu;s</td><td>0.1153 &mu;s</td><td>19.327 &mu;s</td><td>7.3547</td><td>0.5188</td><td>45.12 KB</td>
+</tr><tr><td>QueryNearbyAgents</td><td>1000</td><td>382.988 &mu;s</td><td>7.0349 &mu;s</td><td>11.3600 &mu;s</td><td>377.807 &mu;s</td><td>107.9102</td><td>-</td><td>663.08 KB</td>
+</tr></tbody></table>
+</body>
+</html>
